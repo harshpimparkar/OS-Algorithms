@@ -35,7 +35,7 @@ public class SJF{
         System.out.println("Process\tArrival Time \t Burst Time\tCompletion Time \tTurn Around Time \t Waiting Time");
         for(Process process: processes){
             waitingTime=currentTime;
-            totalWaitingTime+=turnAroundTime;
+            totalWaitingTime+=waitingTime;
             currentTime+=process.burstTime;
             turnAroundTime=waitingTime+process.burstTime;
             totalTurnAroundTime+=turnAroundTime;
